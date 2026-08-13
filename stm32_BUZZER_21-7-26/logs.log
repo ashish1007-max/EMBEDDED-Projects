@@ -1,0 +1,64 @@
+16:26:28 : USB speed   : Full Speed (12MBit/s)
+16:26:28 : Manuf. ID   : STMicroelectronics
+16:26:28 : Product ID  : STM32  BOOTLOADER
+16:26:28 : SN          : 208436665753
+16:26:28 : DFU protocol: 1.1
+16:26:28 : Board       : --
+16:26:28 : Device ID   : 0x413
+16:26:29 : UPLOADING OPTION BYTES DATA ...
+16:26:29 :   Bank          : 0x00
+16:26:29 :   Address       : 0x1fffc000 
+16:26:29 :   Size          : 16 Bytes
+16:26:29 : UPLOADING ...
+16:26:29 :   Size          : 1024 Bytes
+16:26:29 :   Address       : 0x8000000
+16:26:29 : Read progress:
+16:26:29 : Data read successfully
+16:26:29 : Time elapsed during the read operation is: 00:00:00.004
+16:26:57 : Warning: Connection to device 0x413 is lost
+16:26:57 : Disconnected from device.
+17:09:13 : File: C:\Users\DELL\STM32CubeIDE\workspace_1.15.0\STM32_BUZZER_21-7-26\Debug\STM32_BUZZER_21-7-26.elf
+17:09:13 : Number of segments: 2
+17:09:13 : segment[0]: address= 0x8000000, size= 0x1674
+17:09:13 : segment[1]: address= 0x2000000C, size= 0x0
+17:09:28 : Error: Target device not found.Establishing connection with the device failed.
+17:10:22 : USB speed   : Full Speed (12MBit/s)
+17:10:22 : Manuf. ID   : STMicroelectronics
+17:10:22 : Product ID  : STM32  BOOTLOADER
+17:10:22 : SN          : 208436665753
+17:10:22 : DFU protocol: 1.1
+17:10:22 : Board       : --
+17:10:22 : Device ID   : 0x413
+17:10:22 : UPLOADING OPTION BYTES DATA ...
+17:10:22 :   Bank          : 0x00
+17:10:22 :   Address       : 0x1fffc000 
+17:10:22 :   Size          : 16 Bytes
+17:10:22 : UPLOADING ...
+17:10:22 :   Size          : 1024 Bytes
+17:10:22 :   Address       : 0x8000000
+17:10:22 : Read progress:
+17:10:22 : Data read successfully
+17:10:22 : Time elapsed during the read operation is: 00:00:00.003
+17:10:32 : Warning: Connection to device 0x413 is lost
+17:10:32 : Disconnected from device.
+17:12:43 : USB speed   : Full Speed (12MBit/s)
+17:12:43 : Manuf. ID   : STMicroelectronics
+17:12:43 : Product ID  : STM32  BOOTLOADER
+17:12:43 : SN          : 208436665753
+17:12:43 : DFU protocol: 1.1
+17:12:43 : Board       : --
+17:12:43 : Device ID   : 0x413
+17:12:44 : UPLOADING OPTION BYTES DATA ...
+17:12:44 :   Bank          : 0x00
+17:12:44 :   Address       : 0x1fffc000 
+17:12:44 :   Size          : 16 Bytes
+17:12:44 : UPLOADING ...
+17:12:44 :   Size          : 1024 Bytes
+17:12:44 :   Address       : 0x8000000
+17:12:44 : Read progress:
+17:12:44 : Data read successfully
+17:12:44 : Time elapsed during the read operation is: 00:00:00.005
+17:12:54 : Warning: Connection to device 0x413 is lost
+17:12:54 : Disconnected from device.
+17:17:42 : Disconnected from device.
+17:17:57 : Error: Establishing connection with device failed
