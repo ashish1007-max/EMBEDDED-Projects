@@ -1,0 +1,233 @@
+[
+    {
+        "id": "073ab96a9f1463ac",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "32ba3664ab9b2128",
+        "type": "mqtt out",
+        "z": "073ab96a9f1463ac",
+        "name": "",
+        "topic": "esp32/lcd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7a059ab717ebb33b",
+        "x": 660,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d5e51c7f84818e55",
+        "type": "function",
+        "z": "073ab96a9f1463ac",
+        "name": "function 1",
+        "func": "let text = msg.payload;\n\n// LCD is 16x2, so cap at 32 chars total\nif (text.length > 32) {\n    text = text.substring(0, 32);\n}\n\nmsg.payload = text;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 300,
+        "wires": [
+            [
+                "32ba3664ab9b2128"
+            ]
+        ]
+    },
+    {
+        "id": "67c0f87a2c84e040",
+        "type": "ui_text_input",
+        "z": "073ab96a9f1463ac",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "ef29f25257232412",
+        "order": 2,
+        "width": 4,
+        "height": 2,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "esp32/lcd",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 240,
+        "y": 300,
+        "wires": [
+            [
+                "d5e51c7f84818e55"
+            ]
+        ]
+    },
+    {
+        "id": "826a76e893095b8c",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 1,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "75883d3fe25d9b89",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 3,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "e5ae6ba39f412c07",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 4,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "79030750297b1f7f",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 5,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "39b7f3878c920730",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 6,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "044b5a521f8247b5",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 8,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "4ebfefd5507d6d51",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 9,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "e096d550c18f195e",
+        "type": "ui_spacer",
+        "z": "073ab96a9f1463ac",
+        "name": "spacer",
+        "group": "ef29f25257232412",
+        "order": 10,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "7a059ab717ebb33b",
+        "type": "mqtt-broker",
+        "name": "mqtt",
+        "broker": "4f2be0c0826240d8bb2f0a450d294263.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "9b6a74cc586cbc16",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ef29f25257232412",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "792a61841ac5ef33",
+        "order": 1,
+        "disp": true,
+        "width": 16,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9b6a74cc586cbc16",
+        "type": "tls-config",
+        "name": "",
+        "certType": "files",
+        "cert": "",
+        "key": "",
+        "p12": "",
+        "p12name": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": "",
+        "certEnv": "",
+        "keyEnv": "",
+        "caEnv": ""
+    },
+    {
+        "id": "792a61841ac5ef33",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bd94c82c97bc7571",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

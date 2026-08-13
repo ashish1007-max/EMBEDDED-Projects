@@ -1,0 +1,5 @@
+﻿Name,Quantity,Component
+"U5",1," Arduino Uno R3"
+"U2",1," 8-Bit Shift Register"
+"R3, R4, R6, R7, R8, R9, R10, R2",8,"1 kΩ Resistor"
+"D4, D5, D6, D7, D8, D9, D1, D3",8,"Red LED"

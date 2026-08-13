@@ -1,0 +1,100 @@
+10:28:14 : STM32CubeProgrammer API v2.22.0 | Windows-64Bits 
+11:11:19 : File: C:\Users\Ashish Shetty\STM32CubeIDE\workspace_1.15.0\LED-Blinking_wt_STM32\Debug\LED-Blinking_wt_STM32.elf
+11:11:19 : Number of segments: 2
+11:11:19 : segment[0]: address= 0x8000000, size= 0x1690
+11:11:19 : segment[1]: address= 0x2000000C, size= 0x0
+11:14:24 : USB speed   : Full Speed (12MBit/s)
+11:14:24 : Manuf. ID   : STMicroelectronics
+11:14:24 : Product ID  : STM32  BOOTLOADER
+11:14:24 : SN          : 208436665753
+11:14:24 : DFU protocol: 1.1
+11:14:24 : Board       : --
+11:14:24 : Device ID   : 0x413
+11:14:25 : UPLOADING OPTION BYTES DATA ...
+11:14:25 :   Bank          : 0x00
+11:14:25 :   Address       : 0x1fffc000 
+11:14:25 :   Size          : 16 Bytes
+11:14:25 : UPLOADING ...
+11:14:25 :   Size          : 1024 Bytes
+11:14:25 :   Address       : 0x8000000
+11:14:25 : Read progress:
+11:14:25 : Data read successfully
+11:14:25 : Time elapsed during the read operation is: 00:00:00.005
+11:14:49 : Warning: Connection to device 0x413 is lost
+11:14:50 : Disconnected from device.
+11:15:24 : USB speed   : Full Speed (12MBit/s)
+11:15:24 : Manuf. ID   : STMicroelectronics
+11:15:24 : Product ID  : STM32  BOOTLOADER
+11:15:24 : SN          : 208436665753
+11:15:24 : DFU protocol: 1.1
+11:15:24 : Board       : --
+11:15:24 : Device ID   : 0x413
+11:15:25 : UPLOADING OPTION BYTES DATA ...
+11:15:25 :   Bank          : 0x00
+11:15:25 :   Address       : 0x1fffc000 
+11:15:25 :   Size          : 16 Bytes
+11:15:25 : UPLOADING ...
+11:15:25 :   Size          : 1024 Bytes
+11:15:25 :   Address       : 0x8000000
+11:15:25 : Read progress:
+11:15:25 : Data read successfully
+11:15:25 : Time elapsed during the read operation is: 00:00:00.005
+11:16:25 : Warning: Connection to device 0x413 is lost
+11:16:26 : Disconnected from device.
+11:16:35 : USB speed   : Full Speed (12MBit/s)
+11:16:35 : Manuf. ID   : STMicroelectronics
+11:16:35 : Product ID  : STM32  BOOTLOADER
+11:16:35 : SN          : 208436665753
+11:16:35 : DFU protocol: 1.1
+11:16:35 : Board       : --
+11:16:35 : Device ID   : 0x413
+11:16:35 : UPLOADING OPTION BYTES DATA ...
+11:16:35 :   Bank          : 0x00
+11:16:35 :   Address       : 0x1fffc000 
+11:16:35 :   Size          : 16 Bytes
+11:16:35 : UPLOADING ...
+11:16:35 :   Size          : 1024 Bytes
+11:16:35 :   Address       : 0x8000000
+11:16:35 : Read progress:
+11:16:35 : Data read successfully
+11:16:35 : Time elapsed during the read operation is: 00:00:00.005
+11:16:47 : Warning: Connection to device 0x413 is lost
+11:16:48 : Disconnected from device.
+11:22:45 : USB speed   : Full Speed (12MBit/s)
+11:22:45 : Manuf. ID   : STMicroelectronics
+11:22:45 : Product ID  : STM32  BOOTLOADER
+11:22:45 : SN          : 208436665753
+11:22:45 : DFU protocol: 1.1
+11:22:45 : Board       : --
+11:22:45 : Device ID   : 0x413
+11:22:46 : UPLOADING OPTION BYTES DATA ...
+11:22:46 :   Bank          : 0x00
+11:22:46 :   Address       : 0x1fffc000 
+11:22:46 :   Size          : 16 Bytes
+11:22:46 : UPLOADING ...
+11:22:46 :   Size          : 1024 Bytes
+11:22:46 :   Address       : 0x8000000
+11:22:46 : Read progress:
+11:22:46 : Data read successfully
+11:22:46 : Time elapsed during the read operation is: 00:00:00.004
+11:23:08 : Warning: Connection to device 0x413 is lost
+11:23:08 : Disconnected from device.
+11:25:29 : USB speed   : Full Speed (12MBit/s)
+11:25:29 : Manuf. ID   : STMicroelectronics
+11:25:29 : Product ID  : STM32  BOOTLOADER
+11:25:29 : SN          : 208436665753
+11:25:29 : DFU protocol: 1.1
+11:25:29 : Board       : --
+11:25:29 : Device ID   : 0x413
+11:25:30 : UPLOADING OPTION BYTES DATA ...
+11:25:30 :   Bank          : 0x00
+11:25:30 :   Address       : 0x1fffc000 
+11:25:30 :   Size          : 16 Bytes
+11:25:30 : UPLOADING ...
+11:25:30 :   Size          : 1024 Bytes
+11:25:30 :   Address       : 0x8000000
+11:25:30 : Read progress:
+11:25:30 : Data read successfully
+11:25:30 : Time elapsed during the read operation is: 00:00:00.004
+11:25:45 : Warning: Connection to device 0x413 is lost
+11:25:45 : Disconnected from device.

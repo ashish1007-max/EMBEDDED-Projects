@@ -1,0 +1,151 @@
+[
+    {
+        "id": "58713c023c4d3f26",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ccb4dffa05032a3e",
+        "type": "mqtt in",
+        "z": "58713c023c4d3f26",
+        "name": "",
+        "topic": "Calculator/Input",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "7a059ab717ebb33b",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "f3c77a428962c9d3"
+            ]
+        ]
+    },
+    {
+        "id": "4d654d4f5eafbc2e",
+        "type": "ui_text",
+        "z": "58713c023c4d3f26",
+        "group": "ef29f25257232412",
+        "order": 7,
+        "width": 3,
+        "height": 2,
+        "name": "",
+        "label": "Result",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f3c77a428962c9d3",
+        "type": "function",
+        "z": "58713c023c4d3f26",
+        "name": "function 3",
+        "func": "let current = flow.get(\"current\") || \"\";\nlet num1 = flow.get(\"num1\");\nlet operator = flow.get(\"operator\");\n\nlet key = msg.payload.toString();\n\n// Number pressed\nif (!isNaN(key)) {\n    current += key;\n    flow.set(\"current\", current);\n\n    msg.payload = current;\n    return msg;\n}\n\n// Operator pressed (+ - * /)\nif (key === \"+\" || key === \"-\" || key === \"*\" || key === \"/\") {\n    flow.set(\"num1\", Number(current));\n    flow.set(\"operator\", key);\n    flow.set(\"current\", \"\");\n\n    msg.payload = key;\n    return msg;\n}\n\n// Equals pressed\nif (key === \"=\") {\n\n    let num2 = Number(current);\n    let result;\n\n    switch (operator) {\n\n        case \"+\":\n            result = num1 + num2;\n            break;\n\n        case \"-\":\n            result = num1 - num2;\n            break;\n\n        case \"*\":\n            result = num1 * num2;\n            break;\n\n        case \"/\":\n            if (num2 === 0) {\n                result = \"Error: Divide by 0\";\n            } else {\n                result = num1 / num2;\n            }\n            break;\n\n        default:\n            result = \"Invalid\";\n    }\n\n    flow.set(\"current\", \"\");\n    flow.set(\"num1\", null);\n    flow.set(\"operator\", null);\n\n    msg.payload = result;\n    return msg;\n}\n\n// Clear pressed\nif (key === \"C\") {\n    flow.set(\"current\", \"\");\n    flow.set(\"num1\", null);\n    flow.set(\"operator\", null);\n\n    msg.payload = \"Cleared\";\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "4d654d4f5eafbc2e"
+            ]
+        ]
+    },
+    {
+        "id": "7a059ab717ebb33b",
+        "type": "mqtt-broker",
+        "name": "keypad",
+        "broker": "4f2be0c0826240d8bb2f0a450d294263.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "9b6a74cc586cbc16",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ef29f25257232412",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "792a61841ac5ef33",
+        "order": 1,
+        "disp": true,
+        "width": 16,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9b6a74cc586cbc16",
+        "type": "tls-config",
+        "name": "",
+        "certType": "files",
+        "cert": "",
+        "key": "",
+        "p12": "",
+        "p12name": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": "",
+        "certEnv": "",
+        "keyEnv": "",
+        "caEnv": ""
+    },
+    {
+        "id": "792a61841ac5ef33",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3d5448d449aacdde",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

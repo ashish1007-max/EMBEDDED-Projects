@@ -1,0 +1,2 @@
+FOR ELF go to workspace and copy path
+in stm32 programmer copy continue process
